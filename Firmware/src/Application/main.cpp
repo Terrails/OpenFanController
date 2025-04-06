@@ -68,7 +68,7 @@ int main() {
         }
 
         if (!blink_active) {
-            add_repeating_timer_ms(-30000, blink_active_callback, NULL, &blink_active_timer);
+            add_repeating_timer_ms(-15000, blink_active_callback, NULL, &blink_active_timer);
             blink_active = true;
         }
 
@@ -85,7 +85,7 @@ bool blink_connecting_callback(repeating_timer_t *rt) {
 bool blink_active_callback(repeating_timer_t *rt) {
     gpio_put(LED_PIN, 1);
     // Turn off for a quick blink
-    add_alarm_in_ms(500, [](alarm_id_t id, void *user_data) -> int64_t {
+    add_alarm_in_ms(250, [](alarm_id_t id, void *user_data) -> int64_t {
         gpio_put(LED_PIN, 0);
         return 0;
     }, NULL, true);
