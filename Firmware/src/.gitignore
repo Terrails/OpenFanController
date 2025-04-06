@@ -1,0 +1,5 @@
+# VSCode
+!.vscode/c_cpp_properties.json
+!.vscode/cmake-kits.json
+!.vscode/tasks.json
+!.vscode/extensions.json

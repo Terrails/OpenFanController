@@ -11,8 +11,10 @@
 void usb_read_bytes(uint8_t itf);
 void usb_write_bytes(uint8_t itf);
 void usb_cdc_process(uint8_t itf);
-void usb_cdc_tick(void);
-void usb_cdc_send_arr(uint8_t *pData, uint32_t nLenght);
+void usb_cdc_send_arr(uint8_t *pData, uint32_t nLength);
 void usb_cdc_send_str(const char *pData);
+
+void usb_cdc_tick(void);
+bool usb_cdc_connected(void);
 
 #endif /* __USB_CDC_INC_H__ */

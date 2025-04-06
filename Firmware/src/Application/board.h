@@ -13,6 +13,7 @@
 #include <pico/stdlib.h>
 
 #define LED_PIN 25
+#define USB_DET_PIN 26
 
 #define PICO_I2C_INSTANCE   i2c1
 #define PICO_I2C_SDA_PIN    2
